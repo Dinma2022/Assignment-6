@@ -1,0 +1,265 @@
+body {
+  margin: 0;
+  height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 13px;
+  place-items: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, auto);
+  gap: 25px;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: hsl(214, 17%, 92%);
+  max-width: 1080px;
+}
+
+.Daniel {
+  background-color: hsl(263, 55%, 52%);
+  grid-column: span 2;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: hsl(0, 0%, 100%);
+  border-radius: 3%;
+}
+
+.dan1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.dan1-title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+}
+
+.danimg {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid hsl(264, 82%, 80%);
+}
+
+.danimg2 {
+  margin-left: auto;
+  display: block;
+  width: 100px;
+  height: auto;
+}
+
+.Jonathan {
+  background-color: hsl(217, 19%, 35%);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  color: hsl(0, 0%, 100%);
+  border-radius: 3%;
+}
+.jona1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.jona-title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+}
+
+.jonaimg {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Kira {
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(224, 10%, 45%);
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  grid-row: span 2;
+  border-radius: 3%;
+}
+
+.kira1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.kira-title {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  justify-content: center;
+}
+
+.kiraimg {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Jeanette {
+  display: flex;
+  background-color: hsl(0, 0%, 100%);
+  flex-direction: column;
+  padding: 20px;
+  color: hsl(224, 10%, 45%);
+  border-radius: 3%;
+}
+
+.jean1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.jean-title {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.jeanimg {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.Patrick {
+  background-color: hsl(219, 29%, 14%);
+  color: hsl(0, 0%, 100%);
+  grid-column: span 2;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  border-radius: 3%;
+}
+
+.pat1 {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.pat-title {
+  display: flex;
+  justify-content: center;
+  gap: 3px;
+  flex-direction: column;
+}
+
+.patimg {
+  border-radius: 50%;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  border: 3px solid hsl(264, 82%, 80%);
+}
+
+.nth-child {
+  font-weight: 600;
+  line-height: 1.5;
+  margin-bottom: 4px;
+}
+
+p {
+  opacity: 0.7;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+h3 {
+  font: bold;
+}
+
+.dan1-title span:first-child,
+.jona-title span:first-child,
+.kira-title span:first-child,
+.jean-title span:first-child,
+.pat-title span:first-child {
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+.dan1-title span:last-child,
+.jona-title span:last-child,
+.kira-title span:last-child,
+.jean-title span:last-child,
+.pat-title span:last-child {
+  font-weight: 500;
+  opacity: 0.7;
+  white-space: nowrap;
+}
+
+@media (max-width: 768px) {
+  body {
+    display: block;
+    height: auto;
+    padding: 0;
+    margin: 0;
+  }
+
+  .grid-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 16px;
+    gap: 16px;
+    grid-template-columns: 1fr;
+
+    grid-template-areas:
+      "dan"
+      "jon"
+      "jean"
+      "pat"
+      "kira";
+    overflow: visible;
+  }
+
+  .Daniel,
+  .Patrick,
+  .Kira {
+    grid-column: auto;
+    grid-row: auto;
+  }
+
+  .Daniel {
+    grid-area: dan;
+  }
+  .Jonathan {
+    grid-area: jon;
+  }
+  .Jeanette {
+    grid-area: jean;
+  }
+  .Patrick {
+    grid-area: pat;
+  }
+  .Kira {
+    grid-area: kira;
+  }
+
+  .danimg2 {
+    display: none;
+  }
+}
